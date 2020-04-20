@@ -1,0 +1,82 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .app-footer{
+      background-color: black;
+      height: 500px;   
+  }
+  .footerup{
+      display: flex;
+      width: 100%;
+      height: 90%;
+      justify-content: center;
+      padding-top: 34px;
+  }
+  .foortbtn{
+     border: 1px solid blueviolet;
+     margin-right: 18px;
+  }
+  .left{
+     color:white;
+     width: 400px;
+     padding-right: 20px;
+  }
+  .right{
+     width: 400px;
+  }
+  .right mat-form-field{
+     margin-right: 10px;
+  }
+  .right ul{
+     list-style: none;
+     position: relative;
+  }
+  .right li{
+     position: absolute;
+  }
+  .right li:nth-child(1) {
+     color:skyblue;
+     font-size: 70px;
+    top: 50px;
+    right: 81px;
+  }
+  .right li:nth-child(2) {
+   color:white;
+   font-size: 60px;
+   top:0px;
+   right: 40px;
+}
+.right li:nth-child(3) {
+   color:white;
+   font-size: 60px;
+   top: 100px;
+   left: 148px;
+}
+.right li:nth-child(4) {
+   color:white;
+   font-size: 60px;
+   top:10px;
+   left: 88px;
+}
+.right li:nth-child(5) {
+   color:white;
+   font-size: 60px;
+   top: 133px;
+   right: -15px;
+}
+.right li:nth-child(6) {
+   color:white;
+   font-size: 60px;
+   top: 144px;
+   right: 88px;
+}
+.siteyear{
+   color: white;
+   float: right;
+   margin-right: 28px;
+}
+.siteyear mat-icon{
+   color:red;
+}

@@ -1,0 +1,105 @@
+.main{
+    background-image: url('https://demos.creative-tim.com/paper-kit-2-angular/assets/img/soroush-karimi.jpg');
+    width: 100%;
+    height: 400px;
+}
+.mat-card{
+    background: #d2d2d2;
+    display: flex;
+    opacity: 0.95;
+    justify-content: center;
+}
+.mat-form-field{
+    margin: 0px 10px;
+}
+.trend{
+    color:white;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.trendPopular{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.trendContent{
+    background: #d85269;
+    margin: 3rem 0px 0px;
+    padding: 2rem;
+}
+.trendPopular mat-card{
+    background: #d4bfd0;
+    width: 300px;
+    padding: 0px;
+    display: flex;
+    align-self: baseline;
+    margin-left: 20px;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+}
+.trendPopular mat-card img{
+    width: 150px;
+    margin-right: 15px;
+}
+.trendPopular mat-card .top p{
+    margin-bottom: 0px;
+}
+.trendPopular mat-card .top{
+    padding: 10px;
+    color: #d85269;
+}
+.trend span{
+    margin-top: 6px;
+}
+.trend button{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.trendContent h3{
+    text-align: center;
+    color: #eae2f1;
+}
+.PopularContent{
+    margin: 2rem 0;
+}
+.PopularContent h3{
+    text-align: center;
+}
+.Popular{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Popular mat-card{
+    width: 300px;
+    padding: 0px;
+    flex-direction: column;
+    display: flex;
+    align-self: baseline;
+    margin-left: 20px;
+}
+.Popular mat-card img{
+    width: 300px;
+}
+.Popular .popuDtail{
+    width: 300px;
+    padding: 10px;
+}
+.Popular .popuDtail .top{
+    margin-bottom: 1rem;
+}
+.Popular .popuDtail p{
+    margin-bottom: 0rem;
+    width: 300px;
+}
+
+.btm .mat-icon{
+    color: cornflowerblue;
+    font-size: 60px;
+    width: 60px;
+}
+.Popular .popuDtail .btm{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,21 +1,94 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nav class="is-dark">
+  <mat-toolbar color="primary">
+      <a class="navbar-item">
+        <img width="50" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      </a>
+        My App
+    <span class="example-fill-remaining-space">
+     
+    </span>
+    <button mat-button > 
+      <a mat-button routerLink=""> Flights </a>
+    </button>
+  <button mat-button color="accent">
+    <a mat-button routerLink="/home-component" routerLinkActive="active"> Hotel </a>
+  </button>
+  <button mat-button color="accent">
+    <a mat-button routerLink="/home-component" routerLinkActive="active"> Car Rent </a>
+  </button>
+  <button mat-button color="accent">
+    <a mat-button routerLink="/home-component" routerLinkActive="active"> Explore </a>
+  </button>
+  <button mat-button color="accent">
+    <a mat-button routerLink="/home-component" routerLinkActive="active"> Guild </a>
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu">Menu <mat-icon aria-hidden="false" aria-label="Example keyboard_arrow_down icon" [inline]="true">keyboard_arrow_down</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  </mat-toolbar>
+</nav>
 
 <router-outlet></router-outlet>
+<footer class="app-footer">
+  <div class="footerup">
+    <div class="left">
+      <h2>Nucleo Icons</h2>
+      <p>
+        Now UI Kit comes with 100 custom icons made by our friends from NucleoApp. The official package contains over 2.100 thin icons which are looking great in combination with Now UI Kit Make sure you check all of them and use those that you like the most.
+      </p>
+      <button class="foortbtn" mat-stroked-button color="primary">Primary</button>
+      <button mat-raised-button color="primary">Primary</button>
+    </div>
+    <div class="right">
+      <div class="example-button-row">
+        <mat-form-field>
+          <mat-label>Site</mat-label>
+          <mat-select name="food">
+            <mat-option>None</mat-option>
+            <mat-option value="india"> India</mat-option>
+            <mat-option value="Spain"> Spain </mat-option>
+            <mat-option value="United Kingdom"> United Kingdom </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Currency</mat-label>
+          <mat-select name="food">
+            <mat-option value="Rupee"> Repee</mat-option>
+            <mat-option value="euro"> euro </mat-option>
+            <mat-option value="Pound"> Pound </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <ul class="d-xs-none">
+        <li>
+          <mat-icon aria-hidden="false" aria-label="Example wb_cloudy icon" [inline]="true">wb_cloudy</mat-icon>
+        </li>
+        <li>
+          <mat-icon aria-hidden="false" aria-label="Example tag_faces icon" [inline]="true">tag_faces</mat-icon>
+        </li>
+        <li>
+          <mat-icon aria-hidden="false" aria-label="Example location_on icon" [inline]="true">location_on</mat-icon>
+        </li>
+        <li>
+          <mat-icon aria-hidden="false" aria-label="Example video_call icon" [inline]="true">video_call</mat-icon>
+        </li>
+        <li>
+          <mat-icon aria-hidden="false" aria-label="Example hd icon" [inline]="true">hd</mat-icon>
+        </li>
+        <li>
+          <mat-icon aria-hidden="false" aria-label="Example watch_later icon" [inline]="true">watch_later</mat-icon>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div>
+    <button mat-button color="primary">Creative TIM</button> 
+    <button mat-button color="primary">BLOG</button>
+    <button mat-button color="primary">LICENSES</button>
+    <span class="siteyear">© 2020, made with <mat-icon aria-hidden="false" color="red" aria-label="Example favorite icon" [inline]="true">favorite</mat-icon> by Creative Tim</span>
+  </div>
+</footer>

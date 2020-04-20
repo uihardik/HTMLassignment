@@ -1,0 +1,139 @@
+<div class="main">
+    <mat-card class="navbar">
+        
+        <form class="example-form">
+            <!-- From -->
+            <mat-form-field>
+                <mat-label>From</mat-label>
+                <mat-select>
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let state of statesList" [value]="state">{{state}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- To -->
+            <mat-icon aria-hidden="false" aria-label="Example sync_alt icon">sync_alt</mat-icon>
+            <mat-form-field>
+                <mat-label>To</mat-label>
+                <mat-select>
+                  <mat-option>None</mat-option>
+                  <mat-option *ngFor="let state of statesList" [value]="state">{{state}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- Choose Date -->
+            <mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            
+            <!-- Memeber travel -->
+            <mat-form-field>
+                <mat-label>From</mat-label>
+                <mat-select>
+                  <mat-option [value]="state">
+                      ADULTS
+                    <mat-slider
+                        [thumbLabel]="true"
+                        aria-labelledby="text"
+                        label="ADULTS(12y+)"
+                        [displayWith]="formatLabel"
+                        tickInterval="10"
+                        min="1"
+                        max="10">
+                    </mat-slider>
+                </mat-option>
+                <mat-option [value]="state">
+                    YOUTHS
+                  <mat-slider
+                      [thumbLabel]="true"
+                      aria-labelledby="text"
+                      label="ADULTS(12y+)"
+                      [displayWith]="formatLabel"
+                      tickInterval="10"
+                      min="1"
+                      max="10">
+                  </mat-slider>
+              </mat-option>
+              <mat-option [value]="state">
+                CHILDREN
+              <mat-slider
+                  [thumbLabel]="true"
+                  aria-labelledby="text"
+                  label="ADULTS(12y+)"
+                  [displayWith]="formatLabel"
+                  tickInterval="10"
+                  min="1"
+                  max="10">
+              </mat-slider>
+          </mat-option>
+                </mat-select>
+            </mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                  
+                    
+                <button mat-raised-button color="primary"><mat-icon aria-hidden="false" aria-label="Example search icon"> search </mat-icon></button>
+              </form>
+    </mat-card>
+    <div class="trend">
+        <span>
+            Trending Searches: 
+        </span>
+        <button mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        Delhi 
+        <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon">arrow_forward</mat-icon>
+        Dubai
+        </button>
+        <button
+            mat-raised-button
+            matTooltip="Info about the action"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+            Dubai 
+            <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon">arrow_forward</mat-icon> Delhi
+        </button>
+    </div>
+</div>
+
+<div class="PopularContent">
+    <h3> Popular </h3>
+    <div class="Popular">
+        <mat-card *ngFor="let flight of carddetail" class="cardpop">
+            <img src="https://www.kayak.co.in/rimg/dimg/a0/f9/32b88925-city-13852-162da15a798.jpg?width=490&height=278&xhint=1077&yhint=792&crop=true"/>
+             <div class="popuDtail">
+                 <div class="top"> 
+                     <h4>{{flight.title}}</h4>
+                     <p>{{flight.desc}}</p>
+                     <span>{{flight.time}}</span>
+                 </div>
+                 <div class="btm">
+                     <mat-icon class="icon" aria-hidden="false" aria-label="flight_takeoff icon">flight_takeoff</mat-icon>
+                   
+                         <div>
+                             {{flight.price}}
+                             <br/>
+                             1 stop
+                         </div>
+                         
+                     <button mat-flat-button color="primary"> Find flights</button>
+                 </div>           
+             </div>
+         </mat-card>
+    </div>
+    <div class="trendContent">
+        <h3> Trending Coutries </h3>
+        <div class="trendPopular">
+            <mat-card *ngFor="let flight of Trendingcout" class="cardpop">
+                <img [src]="flight.img"/>
+                 <div class="popuDtail">
+                     <div class="top">
+                         <p> FLIGHTS TO</p>
+                         <span>{{flight.name}}</span>
+                     </div>         
+                 </div>
+             </mat-card>
+        </div>
+</div>
